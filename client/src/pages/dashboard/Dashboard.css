@@ -1,0 +1,278 @@
+.cardgroup {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 7px;
+}
+
+.numbers {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.cardname {
+  color: #868484;
+}
+
+.card__icon {
+  font-size: 2.5rem;
+  color: rgb(124, 102, 221);
+}
+
+/* ============ Charts ============ */
+.dashboard__charts {
+  position: relative;
+  width: 100%;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+  min-height: 200px;
+}
+
+.dashboard__charts .box {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* ====================== Details Table======================= */
+
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 30px;
+}
+
+/* ====================== Recent Sales ======================= */
+
+.recent_sales {
+  position: relative;
+  min-height: 530px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.detail__heading {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.button {
+  position: relative;
+  padding: 5px 10px;
+  background-color: rgb(169, 153, 240);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.details Table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details .recent_sales table thead tr th {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* table tbody tr:hover {
+  background-color: rgb(169, 153, 240);
+  cursor: pointer;
+} */
+
+.details .recent_sales table tbody tr td {
+  padding: 9px 5px;
+}
+
+.details .recent_sales table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.details .recent_sales table thead tr th:last-child,
+.details .recent_sales table tbody tr td:last-child {
+  text-align: right;
+}
+.details .recent_sales table thead tr th:nth-child(2),
+.details .recent_sales table tbody tr td:nth-child(2) {
+  text-align: right;
+  padding-right: 25px;
+}
+
+.details .recent_sales table thead tr th:nth-child(3),
+.details .recent_sales table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+
+.status {
+  position: relative;
+  padding: 2px 4px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.delivered {
+  background-color: #8de02c;
+}
+
+.pending {
+  background-color: #f9ca3f;
+}
+
+.return {
+  background-color: #f00;
+}
+
+.in_progress {
+  background-color: #1795ce;
+}
+
+/* ====================== Recent Customers ======================= */
+
+.recent_customers {
+  position: relative;
+  min-height: 530px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.details .recent_customers table tbody tr td {
+  padding: 9px 5px;
+}
+
+.recent_customers table tbody tr td h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2rem;
+}
+
+.recent_customers table tbody tr td h4 span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #868484;
+}
+
+.recent_customers table tbody tr .mobile_number {
+  font-weight: 550;
+}
+
+.recent_customers table tbody tr:hover span {
+  color: #fff;
+}
+
+.details .recent_customers table tbody tr td {
+  border-bottom: none;
+}
+
+/* ==================== BreakPoint =================== */
+@media screen and (max-width: 992px) {
+  .dashboard__charts {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .cardgroup {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard__charts {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+  }
+
+  .box {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details {
+    margin-top: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .recent_customers table tbody tr td h4 span {
+    font-size: 12px;
+  }
+
+  .recent_customers table tbody tr td h4 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cardgroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .recent_sales {
+    overflow-x: auto;
+  }
+
+  .recent_sales table {
+    width: 500px;
+  }
+}
